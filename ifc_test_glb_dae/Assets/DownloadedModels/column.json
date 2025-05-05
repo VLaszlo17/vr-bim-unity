@@ -1,0 +1,66 @@
+[
+  {
+    "ExpressID": 94,
+    "GlobalId": "2brkMeNi56iBzPm6n5mssc",
+    "Class": "IfcBeam",
+    "PredefinedType": "BEAM",
+    "Name": "Gerenda - 001",
+    "Level": "1. Szint",
+    "ObjectType": "Beton - tart\u00f3szerkezet 300 x 400",
+    "QuantitySets": {},
+    "PropertySets": {
+      "Pset_BeamCommon": {
+        "Span": 5836.053566902246,
+        "Slope": 0.0,
+        "Reference": "Beton - tart\u00f3szerkezet 300 x 400",
+        "id": 177
+      },
+      "AC_Pset_RenovationAndPhasing": {
+        "Renovation Status": "New",
+        "id": 178
+      }
+    }
+  },
+  {
+    "ExpressID": 86,
+    "GlobalId": "1dWKWWxtjFmh5JCrzKNTl2",
+    "Class": "IfcColumn",
+    "PredefinedType": "COLUMN",
+    "Name": "Oszlop - 001",
+    "Level": "0. Szint",
+    "ObjectType": "\u00c1LTAL\u00c1NOS - TART\u00d3SZERKEZET 300 x 300",
+    "QuantitySets": {},
+    "PropertySets": {
+      "Pset_ColumnCommon": {
+        "Slope": 90.0,
+        "Reference": "\u00c1LTAL\u00c1NOS - TART\u00d3SZERKEZET 300 x 300",
+        "id": 156
+      },
+      "AC_Pset_RenovationAndPhasing": {
+        "Renovation Status": "New",
+        "id": 157
+      }
+    }
+  },
+  {
+    "ExpressID": 91,
+    "GlobalId": "3cOnpOEDP7KgoSuNLiKqaG",
+    "Class": "IfcColumn",
+    "PredefinedType": "COLUMN",
+    "Name": "Oszlop - 001",
+    "Level": "0. Szint",
+    "ObjectType": "\u00c1LTAL\u00c1NOS - TART\u00d3SZERKEZET 300 x 300",
+    "QuantitySets": {},
+    "PropertySets": {
+      "Pset_ColumnCommon": {
+        "Slope": 90.0,
+        "Reference": "\u00c1LTAL\u00c1NOS - TART\u00d3SZERKEZET 300 x 300",
+        "id": 167
+      },
+      "AC_Pset_RenovationAndPhasing": {
+        "Renovation Status": "New",
+        "id": 168
+      }
+    }
+  }
+]
