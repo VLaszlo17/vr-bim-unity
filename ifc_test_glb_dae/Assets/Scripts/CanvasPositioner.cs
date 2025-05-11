@@ -1,16 +1,16 @@
 using UnityEngine;
 
-// A Canvas panel helyes pozícionálását végzõ osztály a kamera elõtt VR-ban
+// A Canvas panel helyes pozï¿½cionï¿½lï¿½sï¿½t vï¿½gzï¿½ osztï¿½ly a kamera elï¿½tt VR-ban
 public class CanvasPositioner : MonoBehaviour
 {
-    public Transform cameraTransform; // A kamera Transform referenciája (XR Rig kamerája)
-    public float distanceFromCamera = 2f; // Milyen messze legyen a Canvas a kamerától
-    public float heightOffset = 0f; // Függõleges eltolás a Canvas pozícióján
+    public Transform cameraTransform; // A kamera Transform referenciï¿½ja (XR Rig kamerï¿½ja)
+    public float distanceFromCamera = 2.0f; // Milyen messze legyen a Canvas a kamerï¿½tï¿½l
+    public float heightOffset = 0f; // Fï¿½ggï¿½leges eltolï¿½s a Canvas pozï¿½ciï¿½jï¿½n
 
-    // Játék indulásakor lefut
+    // Jï¿½tï¿½k indulï¿½sakor lefut
     void Start()
     {
-        // Ha nincs beállítva a kamera Transform, megpróbáljuk automatikusan megtalálni
+        // Ha nincs beï¿½llï¿½tva a kamera Transform, megprï¿½bï¿½ljuk automatikusan megtalï¿½lni
         if (cameraTransform == null)
         {
             Camera cam = Camera.main;
@@ -20,28 +20,28 @@ public class CanvasPositioner : MonoBehaviour
             }
         }
 
-        // Canvas pozíciójának beállítása
+        // Canvas pozï¿½ciï¿½jï¿½nak beï¿½llï¿½tï¿½sa
         PositionCanvas();
     }
 
-    // Beállítja a Canvas pozícióját a kamera elõtt
+    // Beï¿½llï¿½tja a Canvas pozï¿½ciï¿½jï¿½t a kamera elï¿½tt
     void PositionCanvas()
     {
         if (cameraTransform == null)
             return;
 
-        // A kamera elõre irányának lekérése (csak vízszintes komponens)
+        // A kamera elï¿½re irï¿½nyï¿½nak lekï¿½rï¿½se (csak vï¿½zszintes komponens)
         Vector3 forward = cameraTransform.forward;
         forward.y = 0;
         forward.Normalize();
 
-        // Pozíció kiszámítása: kamera pozíciója + elõre irány * távolság
+        // Pozï¿½ciï¿½ kiszï¿½mï¿½tï¿½sa: kamera pozï¿½ciï¿½ja + elï¿½re irï¿½ny * tï¿½volsï¿½g
         transform.position = cameraTransform.position + forward * distanceFromCamera;
-        // Függõleges eltolás hozzáadása
+        // Fï¿½ggï¿½leges eltolï¿½s hozzï¿½adï¿½sa
         transform.position += new Vector3(0, heightOffset, 0);
 
-        // Canvas irányítása a kamera felé
+        // Canvas irï¿½nyï¿½tï¿½sa a kamera felï¿½
         transform.LookAt(cameraTransform);
-        transform.Rotate(0, 180, 0); // Megfordítjuk, hogy helyesen nézzen a játékos felé
+        transform.Rotate(0, 180, 0); // Megfordï¿½tjuk, hogy helyesen nï¿½zzen a jï¿½tï¿½kos felï¿½
     }
 }

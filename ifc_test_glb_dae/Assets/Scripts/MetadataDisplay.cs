@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 
-// Egy elemhez tartozó metaadatok megjelenítéséért felelős osztály.
+// Egy elemhez tartozó metaadatok megjelenítéséért felelős osztály UI-n.
 public class MetadataDisplay : MonoBehaviour
 {
     [TextArea(5, 20)]

@@ -10,7 +10,7 @@ using Siccity.GLTFUtility;
 // GLB modellek letöltését és betöltését kezelõ osztály
 public class GlbModelDownloader : MonoBehaviour
 {
-    public string apiBaseUrl = "http://127.0.0.1:8000"; // API szerver alap URL-je
+    public string apiBaseUrl = "https://ifc-api.onrender.com"; // API szerver alap URL-je
     public Transform buttonParent; // Ide kerülnek a generált gombok (pl. ScrollView Content)
     public Button buttonPrefab;    // A gomb prefab amit létrehozunk
     public GameObject loadingCanvas; // A betöltés közbeni UI panel, amit eltüntetünk választás után
@@ -95,6 +95,7 @@ public class GlbModelDownloader : MonoBehaviour
             Debug.LogError("JSON fájl letöltési hiba: " + jsonRequest.error);
             yield break;
         }
+        
 
         string jsonText = jsonRequest.downloadHandler.text;
 
