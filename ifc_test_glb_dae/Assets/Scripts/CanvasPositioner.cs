@@ -5,7 +5,7 @@ public class CanvasPositioner : MonoBehaviour
 {
     public Transform cameraTransform; // A kamera Transform referenci�ja (XR Rig kamer�ja)
     public float distanceFromCamera = 2.0f; // Milyen messze legyen a Canvas a kamer�t�l
-    public float heightOffset = 0f; // F�gg�leges eltol�s a Canvas poz�ci�j�n
+    public float heightOffset = 2.0f; // F�gg�leges eltol�s a Canvas poz�ci�j�n
 
     // J�t�k indul�sakor lefut
     void Start()
