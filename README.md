@@ -2,6 +2,22 @@
 
 ## Szerver
 
+A hálózat beállítása (parancssorból beimportálhatóak):
+
+**A requirements.txt tartalmazza a szükséges csomagokat**
+
+- IfcConvert és IfcOpenshell telepítése
+- Venv szerver beállítása:
+  ```bash
+  python -m venv venv 
+  ```
+  aktiválása:
+  ```bash
+  venv\Scripts\activate
+  ```
+
+
+
 A `halozat` mappában parancssorból lehet elindítani a szervert az alábbi paranccsal:
 
 ```bash
