@@ -32,6 +32,17 @@ Telepítéskor:
     py -3.12 -m pip install ifcopenshell-0.8.2-py312-none-win_amd64.whl
     ```
 
+### 3. FastApi és uvicorn telepítése
+
+A szerver működéséhez szükséges további csomagok, szintén parancssorból kiadva:
+
+```bash
+pip install "fastapi[standard]"
+pip install uvicorn
+```
+
+### 4. Hálózat indítása
+
 A `halozat` mappában parancssorból lehet elindítani a szervert az alábbi paranccsal:
 
 ```bash
@@ -77,7 +88,7 @@ Ezután a **File > Build and Run** menüponttal indítható a tesztelés.
 
 ---
 
-## Lehetséges problémák és megoldások
+## Lehetséges problémák Unity-ben és megoldások
 
 > Ezek a problémák nem mindig fordulnak elő, de érdemes tudni róluk:
 
