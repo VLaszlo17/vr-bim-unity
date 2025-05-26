@@ -49,7 +49,13 @@ A `halozat` mappában parancssorból lehet elindítani a szervert az alábbi par
 uvicorn ifc_api.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-Ezután az azonos hálózaton lévő eszközök elérik. Ehhez meg kell adni a számítógép IP címét, ami parancssorból az `ipconfig` parancs kiadása után a **Wireless LAN adapter Wi-Fi / IPv4 Address** mellett látható. Emellett a port számot is meg kell adni.
+Ezután az azonos hálózaton lévő eszközök elérik. Ehhez meg kell adni a számítógép IP címét, ami parancssorból az `ipconfig` parancs kiadása után a **Wireless LAN adapter Wi-Fi / IPv4 Address** mellett látható.
+
+Példa:         
+
+IPv4 Address. . . . . . . . . . . : 192.168.0.17
+
+Emellett a port számot is meg kell adni.
 
 Példa elérési út böngészőben:
 
@@ -110,3 +116,28 @@ Ezután a **File > Build and Run** menüponttal indítható a tesztelés.
   Ha a modell nem jelenik meg futás közben, húzd be manuálisan a `Scene` nézetbe. Ha ott megjelenik, akkor el lehet távolítani a `Hierarchy`-ból. Ezután általában már automatikusan megjelenik.
 
 - **Nagyobb modellek lassabban töltődnek be.**
+
+
+
+# Parancsok összefoglalva
+## Kötelező csomagok telepítése
+- pip install "fastapi[standard]"
+- pip install uvicorn
+- py -3.12 -m pip install ifcopenshell-0.8.2-py312-none-win_amd64.whl
+
+### Szerver indítása 
+uvicorn ifc_api.main:app --host 0.0.0.0 --port 8000 --reload
+
+
+## 🧩 Használt verziók
+
+| Eszköz / Könyvtár    | Verzió                              |
+|----------------------|-------------------------------------|
+| Python               | 3.12.3 (amd64)                      |
+| ifcopenshell         | 0.8.2 (whl, py312)                  |
+| FastAPI              | 0.110+                              |
+| Uvicorn              | 0.29+                               |
+| IfcConvert.exe       | 0.6.0 (Windows CLI)                 |
+| Unity                | 2022.3 LTS ajánlott                 |
+| GLTFUtility          | Siccity/GLTFUtility GitHub verzió  |
+
