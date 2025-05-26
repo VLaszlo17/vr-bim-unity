@@ -1,22 +1,36 @@
+# VR BIM Unity + FastAPI szerver
+
+Ez a projekt egy BIM modell VR-megjelenítésére szolgáló rendszer, amely `.ifc` fájlokat dolgoz fel FastAPI szerveren keresztül, és `.glb` (3D modell) és `.json` (metaadat) fájlokat biztosít a Unity számára.
+
+---
 # Az alkalmazás beállítása
 
-## Szerver
+## 🐍 Python és ifcopenshell telepítése
 
-A hálózat beállítása (parancssorból beimportálhatóak):
+### 1. Python 3.12 telepítése (Windows)
 
-**A requirements.txt tartalmazza a szükséges csomagokat**
+Töltsd le innen:  
+👉 https://www.python.org/downloads/release/python-3123/
 
-- IfcConvert és IfcOpenshell telepítése
-- Venv szerver beállítása:
-  ```bash
-  python -m venv venv 
-  ```
-  aktiválása:
-  ```bash
-  venv\Scripts\activate
-  ```
+Telepítéskor:
+- ✅ pip install legyen bepipálva
+- ✅ Add Python to PATH legyen bepipálva
 
+---
 
+### 2. ifcopenshell kézi telepítése
+
+1. Látogasd meg:  
+👉 https://pypi.org/project/ifcopenshell/#files
+
+2. Töltsd le ezt a fájlt (ha 64-bites Python 3.12-t használsz):
+👉 ifcopenshell-0.8.2-py312-none-win_amd64.whl
+
+3. Parancssorban telepítsd(ahol a "ifcopenshell-0.8.2-py312-none-win_amd64.whl" van):
+
+   ```bash
+    py -3.12 -m pip install ifcopenshell-0.8.2-py312-none-win_amd64.whl
+    ```
 
 A `halozat` mappában parancssorból lehet elindítani a szervert az alábbi paranccsal:
 
