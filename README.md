@@ -1,6 +1,6 @@
 # VR BIM Unity + FastAPI szerver
 
-Ez a projekt egy BIM modell VR-megjelenítésére szolgáló rendszer, amely `.ifc` fájlokat dolgoz fel FastAPI szerveren keresztül, és `.glb` (3D modell) és `.json` (metaadat) fájlokat biztosít a Unity számára.
+Ez a projekt egy BIM modell VR-megjelenítésére szolgáló rendszer, amely `.ifc` fájlokat dolgoz fel FastAPI szerveren keresztül, és `.glb` (3D modell) és `.json` (metaadat) fájlokat biztosít a Unity számára. A Unity alkalmazásban a hangsúly a metaadatok vizuális megjelenítésén és a felhasználóbarát interakciók kialakításán volt.
 
 ---
 # Az alkalmazás beállítása
